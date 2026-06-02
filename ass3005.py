@@ -525,20 +525,17 @@ Largest Happy Number = Not Available
 
 --- """
 #SOLUTION 9
-numbers = []
+"""numbers = []
 n = int(input("Enter count: "))
 
 for i in range(n):
     num = int(input(f"Enter numbers: "))
     numbers.append(num)
-
 happy = []
-
 for num in numbers:
     temp = num
     ishappy = True
     countsteps = 0
-
     while temp != 1:
         if countsteps > 100:
             ishappy = False
@@ -550,12 +547,9 @@ for num in numbers:
             temp //= 10
         temp = total
         countsteps += 1
-
     if ishappy:
         happy.append(num)
-
 count = len(happy)
-
 if happy:
     largest = happy[0]
     for h in happy:
@@ -566,8 +560,102 @@ else:
 
 print(f"Happy Numbers = {happy}")
 print(f"Count = {count}")
-print(f"Largest Happy Number = {largest}")
+print(f"Largest Happy Number = {largest}")"""
+ 
+"""
+#devraj 
+n=int(input("Enter the number of element: "))
 
+l=[]
+for i in range(n):
+    x=int(input("Enter the element "))
+    l.append(x)
+
+happy=[]
+for i in l:
+    if i<9:
+       j=i**2
+    else:
+        j=i
+    while True:
+        if j>9:
+            sum=0
+            for k in str(j):
+                k=int(k)
+                sum=sum+k**2
+            j=sum
+        else:
+            if j==1:
+                happy.append(i)
+            else:
+                pass
+            break
+print(happy)
+print("Count =",len(happy))
+
+if len(happy)>0:
+     ma=max(happy)
+else:
+    ma="Not Available"
+print("Largest Happy Number =",ma)"""
+
+#kuldeep
+""" a=int(input("Enter list number :"))
+arr=[]
+print("Enter the element :")
+for i in range (a):
+    x=int(input("Element is :"))
+    arr.append(x)
+print(arr)
+p=[]
+for j in range (a):
+    r=arr[j]
+    while True:
+        sum=0
+        while r>0:
+            v=r%10
+            sum=sum+v**2
+            r=r//10
+        r=sum
+        if sum==1 :
+            p.append(arr[j])
+            break
+        elif len(str(sum))<=1:
+            break
+if len(p)>0:
+    print("Happy Numbers =",p)
+    print("Count =",len(p))
+    q=sorted(p)
+    print("Largest Happy Number :",q[-1])
+else :
+    print("Happy Numbers = []")
+    print("Count = 0")
+    print("Largest Happy Number = Not Available") 
+ """
+arr=[]
+n=int(input("Enter the n:"))
+for i in range(n):
+    arr.append(int(input()))
+print(arr)
+num=[]
+for i in range(n):
+    r=arr[i]
+    while True:
+        total=0
+        while r>0:
+            digit=r%10
+            total=total+digit**2  
+            r=r//10
+        r=total
+        if total==1:
+            num.append(arr[i])
+            break
+        else:
+            if len(str(total))<=1<1:
+                break
+if len(num)>0:
+    print(num)
+    print(len(num)) 
 
 #QUESTION 10
 """ ====================================================================
@@ -625,4 +713,5 @@ else:
     print("count=",count)
 dup.sort()
 print("Sorted dupliacted numbers",dup) """
+
     

@@ -542,5 +542,3 @@ print("Least frequent:",l)
         
 
   """
-n=[41,44,44]
-for i in range()
