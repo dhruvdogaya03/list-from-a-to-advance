@@ -332,4 +332,66 @@ for i in range(rows):
  """
 
 #multiply of 2 matrix
+""" matrix1=[]
+print("Details of Matrix1")
+rows1=int(input("Enter the rows:"))
+cols1=int(input("Enter the cols:"))
+for i in range(rows1):
+    row=[]
+    for j in range(cols1):
+        row.append(int(input()))
+    matrix1.append(row) 
+    print()
+print("Ele are:")
+for i in range(len(matrix1)):
+    for j in matrix1[i]:
+        print(j,end=" ")
+    print()
+matrix2=[]
+print("Details of Matrix2")
+rows2=int(input("Enter the rows:"))
+cols2=int(input("Enter the cols:"))
+for i in range(rows2):
+    row=[]
+    for j in range(cols2):
+        row.append(int(input()))
+    matrix2.append(row) 
+    print()
+print("Ele are:")
+for i in range(len(matrix2)):
+    for j in matrix2[i]:
+        print(j,end=" ")
+    print()
+ 
+if cols1!=rows1:
+    print("Multipliacation not possiblee ")
+else:
+    result=[]
+    for i in range(rows2):
+        for j in range(cols1):
+            row.append(0)
+            result.append(row)
+for i in range(rows1):
+    for j in range(cols2):
+        for k in range(cols1):
+                result[j][j]=result[j][j]+matrix1[i][k]*matrix2[k][j]
+print("\nresult matrix:")
+for i in result:
+    print(i,end="")
 
+ """
+
+a=[1,1,1,1]
+k=2
+count=0
+for i in range(len(a)):
+    for j in range(i+1,len(a)):
+        if a[i]+a[j]==k:
+            count+=1
+print(count)
+
+""" for i in range(len(a)):
+    for j in range(i+1,len(a)):
+        count=0
+        b=[count+=1 if a[i]+a[j]==k ]
+print(count) """
